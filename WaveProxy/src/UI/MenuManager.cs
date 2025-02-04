@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WaveProxy.src.UI {
+﻿namespace WaveProxy.src.UI {
     internal class MenuManager {
     }
 }
