@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿// PatternValidator.cs - Uses regex to validate pattern
+
+using System.Text.RegularExpressions;
 
 namespace WaveProxy.src.Validation {
     internal class PatternValidator {

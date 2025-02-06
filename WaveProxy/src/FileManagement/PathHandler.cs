@@ -1,4 +1,6 @@
-﻿namespace WaveProxy.src.FileHandling {
+﻿// PathHandler.cs - Manages directory paths and ensures required files exist.
+
+namespace WaveProxy.src.FileManagement {
 
     public enum DirectoryName {
         Data,

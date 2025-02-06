@@ -1,6 +1,8 @@
-﻿using System.Text.RegularExpressions;
+﻿// RegexProvider.cs - Stores compiled regex patterns for proxy validation.
 
-namespace WaveProxy.src.RegexFactory {
+using System.Text.RegularExpressions;
+
+namespace WaveProxy.src.RegexUtils {
 
     public enum RegexType {
         Proxy_Port,
