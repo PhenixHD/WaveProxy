@@ -12,25 +12,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include=".editorconfig" />
+    <None Remove="config\appsettings.json" />
+    <None Remove="data\https.txt" />
+    <None Remove="data\proxies.txt" />
+    <None Remove="data\socks4_5.txt" />
+    <None Remove="data\urls.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="config\appsettings.json">
+    <Content Include="config\appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\https.txt">
+    </Content>
+    <Content Include="data\https.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\proxies.txt">
+    </Content>
+    <Content Include="data\proxies.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\socks4_5.txt">
+    </Content>
+    <Content Include="data\socks4_5.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\urls.txt">
+    </Content>
+    <Content Include="data\urls.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
 
 </Project>
