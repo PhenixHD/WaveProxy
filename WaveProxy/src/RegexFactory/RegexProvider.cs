@@ -17,8 +17,8 @@ namespace WaveProxy.src.RegexFactory {
 
         private Regex RegexBuilder(RegexType regexType) {
             Regex compiledRegex = regexType switch {
-                RegexType.Proxy_Port => new Regex(@"(\d{1,3}(?:\.\d{1,3}){3}:\d{1,5})", RegexOptions.Compiled),
-                RegexType.IPv4 => new Regex(@"\d{1,3}(?:\.\d{1,3}){3}", RegexOptions.Compiled),
+                RegexType.Proxy_Port => new Regex(@"\b(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2}):\d{1,5}\b", RegexOptions.Compiled),
+                RegexType.IPv4 => new Regex(@"\b(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})\b", RegexOptions.Compiled),
                 RegexType.URL => new Regex(@"https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}([\/\w.-]*)*(\?[^\s]*)?", RegexOptions.Compiled),
                 _ => throw new ArgumentException("Invalid RegexType")
             };
