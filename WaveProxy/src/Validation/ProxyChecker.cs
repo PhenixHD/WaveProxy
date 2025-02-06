@@ -1,4 +1,4 @@
-﻿namespace WaveProxy.src.Checking {
+﻿namespace WaveProxy.src.Validation {
     internal class ProxyChecker {
     }
 }

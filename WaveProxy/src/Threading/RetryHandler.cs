@@ -1,4 +1,4 @@
 ﻿namespace WaveProxy.src.Concurrency {
-    internal class SemaphoreManager {
+    internal class RetryHandler {
     }
 }

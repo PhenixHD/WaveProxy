@@ -1,4 +1,4 @@
 ﻿namespace WaveProxy.src.Concurrency {
-    internal class RetryManager {
+    internal class TaskLimiter {
     }
 }

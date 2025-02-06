@@ -1,4 +1,4 @@
 ﻿namespace WaveProxy.src.FileHandling {
-    internal class FileWriter {
+    internal class FileReader {
     }
 }

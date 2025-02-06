@@ -1,4 +1,4 @@
 ﻿namespace WaveProxy.src.Scraping {
-    internal class ProxyFetcher {
+    internal class ProxyListParser {
     }
 }

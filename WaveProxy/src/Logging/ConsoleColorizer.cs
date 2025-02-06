@@ -1,4 +1,4 @@
 ﻿namespace WaveProxy.src.Logging {
-    internal class ColorManager {
+    internal class ConsoleColorizer {
     }
 }
