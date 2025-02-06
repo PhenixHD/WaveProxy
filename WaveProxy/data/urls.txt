@@ -426,7 +426,6 @@ http://www.getproxy.jp/vietnam
 http://www.google-proxy.net/
 http://www.goproxing.com
 http://www.guardster.com/subscription/proxy_free.php
-http://www.gwbn.com/&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;
 http://www.gwbn.com/index.php
 http://www.haozs.net/ip3.htm
 http://www.hidemyass.com
@@ -762,4 +761,3 @@ https://spys.one/
 https://spys.one/en/free-proxy-list/
 https://www.facebook.com/sshproxy
 https://www.proxify.us
-https://www.socks-proxy.net/

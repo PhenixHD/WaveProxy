@@ -1,4 +1,4 @@
-﻿namespace WaveProxy.src.RegexValidation {
+﻿namespace WaveProxy.src.RegexFactory {
     internal class PatternValidator {
     }
 }
