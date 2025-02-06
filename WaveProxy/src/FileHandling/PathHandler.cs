@@ -15,28 +15,38 @@
 
     internal class PathHandler {
         public string InputFilePath { get; private set; }
-        public string OutputFilePath { get; private set; }
-        private string _currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        public string OutputFilePath { get; private set; } = string.Empty;
+        private readonly string _currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
         public PathHandler(DirectoryName inputDirectory, FileName inputFileName) {
+            string inputFolder = GetFolderName(inputDirectory);
+            ValidateDirectoryExists(inputFolder);
+
             InputFilePath = GetPath(inputDirectory, inputFileName);
-            ValidateFileExists(InputFilePath);
         }
 
         public PathHandler(DirectoryName inputDirectory, FileName inputFileName, DirectoryName outputDirectory, FileName outputFileName) {
-            InputFilePath = GetPath(inputDirectory, inputFileName);
-            ValidateFileExists(InputFilePath);
+            string inputFolder = GetFolderName(inputDirectory);
+            string outputFolder = GetFolderName(outputDirectory);
 
+            ValidateDirectoryExists(inputFolder);
+            ValidateDirectoryExists(outputFolder);
+
+            InputFilePath = GetPath(inputDirectory, inputFileName);
             OutputFilePath = GetPath(outputDirectory, outputFileName);
-            ValidateFileExists(OutputFilePath);
+        }
+
+        private string GetFolderName(DirectoryName directory) {
+            return directory switch {
+                DirectoryName.Data => Path.Combine(_currentDirectory, "data"),
+                DirectoryName.Config => Path.Combine(_currentDirectory, "config"),
+                _ => throw new ArgumentException("Invalid directory name")
+            };
         }
 
         public string GetPath(DirectoryName directory, FileName filename) {
-            string folderName = directory switch {
-                DirectoryName.Data => "data",
-                DirectoryName.Config => "config",
-                _ => throw new ArgumentException("Invalid directory name")
-            };
+
+            string directoryPath = GetFolderName(directory);
 
             string fileName = filename switch {
                 FileName.appsettings => "appsettings.json",
@@ -47,9 +57,6 @@
                 _ => throw new ArgumentException("Invalid file name")
 
             };
-
-            string directoryPath = Path.Combine(_currentDirectory, folderName);
-            ValidateDirectoryExists(directoryPath);
 
             return Path.Combine(directoryPath, fileName);
         }
